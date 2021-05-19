@@ -26,9 +26,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 SECRET_KEY = '=24ea_@#z&qa_dx)ru*ohv2$g#%n!+^$^prtv699l^gu*w^((z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
