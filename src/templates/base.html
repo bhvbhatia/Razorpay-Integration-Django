@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'src/images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'src/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'src/css/style.css' %}" />
+
+
+  </head>
+  <style media="screen">
+  {% block css %}
+
+{% endblock %}
+  </style>
+
+
+
+      <body>
+
+          <!-- ################# Header Starts Here#######################--->
+      <header>
+          <div class="header-top">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-7 col-md-12 left-item">
+                          <ul>
+                              <li><i class="fas fa-envelope-square"></i>givespark12@gmail.com</li>
+                              <li><i class="fas fa-phone-square"></i>9532675632</li>
+                          </ul>
+                      </div>
+                      <div class="col-lg-5 d-none d-lg-block right-item">
+                          <ul>
+                              <li><a><i class="fab fa-github"></i></a></li>
+                              <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                              <li> <a><i class="fab fa-pinterest-p"></i></a></li>
+                              <li><a><i class="fab fa-twitter"></i></a></li>
+                              <li> <a><i class="fab fa-facebook-f"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <div id="nav-head" class="header-nav">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                          <h1>Give Spark</h1>
+                         <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                      </div>
+                      <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                          <ul>
+                              <li><a href="{% url 'home' %}">Home</a></li>
+                              <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                              <li><a href="{% url 'event' %}">Events</a></li>
+                              <li><a href="{% url 'blog' %}">Blog</a></li>
+                              <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-2 d-none d-lg-block appoint">
+                        <a href="donate"><button class="btn btn-success">Donate Now</button></a>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+      </header>
+
+
+      {% block body %}
+
+      {% endblock %}
+
+
+
+<script src="{% static 'src/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'src/js/popper.min.js' %}"></script>
+<script src="{% static 'src/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'src/js/script.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  {% block js %} {% endblock %}
+
+</body>
+</html>
