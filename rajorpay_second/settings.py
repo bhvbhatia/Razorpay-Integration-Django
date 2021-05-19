@@ -32,8 +32,8 @@ ALLOWED_HOSTS = ['razor-django.herokuapp.com','127.0.0.1']
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "bhvbhatia007@gmail.com"
-EMAIL_HOST_PASSWORD = "bhavy1229@"
+EMAIL_HOST_USER = "your email"
+EMAIL_HOST_PASSWORD = "your pass"
 EMAIL_PORT = 587
 # Application definition
 

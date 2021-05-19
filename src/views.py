@@ -23,7 +23,7 @@ def contact(request):
         email = request.POST.get("email")
         message = request.POST.get("message")
         send_mail("Contact Form",message,settings.EMAIL_HOST_USER,
-                 ['ucc.bhavy12@gmail.com'], )
+                 ['reciepentemailaddress'], )
     return render(request,'contact_us.html')
 
 
@@ -36,7 +36,7 @@ def donate(request):
         name = request.POST.get("name")
         email = request.POST.get("email")
         amount = int(request.POST.get("amount"))*100
-        client = razorpay.Client(auth = ("rzp_test_a4fGWzO0cbi2UL", "jaZHteX59y4a8GtB0CQbuEFO"))
+        client = razorpay.Client(auth = ("yourapikeyrazorpay", "privatekeyrazorpay"))
         payment = client.order.create({'amount':amount, 'currency':'INR', 'payment_capture':'1'})
         print(payment)
         coff = coffee(name=name, amount=amount, email=email, payment_id = payment['id'])
